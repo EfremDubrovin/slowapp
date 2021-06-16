@@ -1,0 +1,8 @@
+#### build slowapp image
+docker build ./ -t slowapp 
+
+#### run docker container
+docker run -p 8080:8080 -p 8000:8000 slowapp
+
+#### try out request
+curl "http://localhost:8080/prime/5000" 
