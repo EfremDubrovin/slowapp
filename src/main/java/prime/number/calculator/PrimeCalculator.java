@@ -1,8 +1,11 @@
 package prime.number.calculator;
 
+import org.springframework.stereotype.Component;
+
 import java.time.Duration;
 import java.time.ZonedDateTime;
 
+@Component
 public class PrimeCalculator {
 
     /**
