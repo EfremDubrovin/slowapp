@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 -jar /app.jar
+java -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1089 -Dcom.sun.management.jmxremote.rmi.port=1089 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost -Xmx1G -Xms256m -XX:MaxMetaspaceSize=256m -XX:+UseParallelGC -Djava.net.preferIPv6Addresses=true -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 -jar /app.jar
